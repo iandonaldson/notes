@@ -1,0 +1,111 @@
+---
+title: "regression"
+output: 
+  html_document:
+    pandoc_args:
+    - +RTS
+    - -K64m
+    - -RTS
+    toc: yes
+---
+
+##learning resources  
+
+* **Data Specialization Course**  
+Videos: search Brian Caffo on YouTube  
+Code: https://github.com/DataScienceSpecialization/courses and  
+Notes: http://datasciencespecialization.github.io/   
+
+* **ISLR Videos and Notes**
+https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/ 
+
+
+
+## proof of least squares solution
+https://math.stackexchange.com/questions/131590/derivation-of-the-formula-for-ordinary-least-squares-linear-regression 
+
+## linear regression using the linear model (lm) function
+
+### how to obtain coefficients (intercept and slope for a linear model)
+
+```{r comment=NA, message=FALSE}
+library(UsingR)
+data(diamonds)
+library(ggplot2)
+fit <- lm(price ~ carat, data = diamond)
+coef(fit)
+```
+
+### regression on centred data will give intercept that is y value for mean value of x
+
+* the I notation is a shortcut to allow evaluation of variable in-line with lm call
+
+```{r}
+fit2 <- lm(price ~ I(carat - mean(carat)), data = diamond)
+coef(fit2)
+```
+
+### making predictions with a model
+
+```{r}
+newx <- c(0.16, 0.27, 0.34)
+predict(fit, newdata = data.frame(carat = newx))
+```
+
+#plotting regression lines in base plot
+
+```{r}
+data(diamond)
+plot(diamond$carat, diamond$price,  
+     xlab = "Mass (carats)", 
+     ylab = "Price (SIN $)", 
+     bg = "lightblue", 
+     col = "black", cex = 1.1, pch = 21,frame = FALSE)
+abline(lm(price ~ carat, data = diamond), lwd = 2)
+points(diamond$carat, predict(fit), pch = 19, col = "red") 
+```
+
+
+
+### plotting regression lines in ggplot
+
+```{r}
+g <- ggplot(diamond, aes(x=carat, y=price))
+g <- g + xlab("Mass (carats)")
+g <- g + ylab("Price (dollars)")
+g <- g + geom_point(size = 6, colour = "black", alpha = 0.2)
+g <- g + geom_point(size = 5, colour = "blue", alpha = 0.2)
+g <- g + geom_smooth(method="lm", colour="black")
+g
+```
+
+### plotting interactive regression plot in plotly
+
+https://plot.ly/ggplot2/geom_abline/  
+
+```{r}
+library(plotly)
+
+p <- ggplotly(g)
+p
+
+```
+
+
+### obtain residuals for a fit
+
+```{r}
+e <- resid(fit)
+#or
+fit$residuals
+```
+
+
+
+
+```{r name, echo=TRUE, eval=TRUE, results='show', cache=FALSE, comment=NA}
+
+#
+
+```
+
