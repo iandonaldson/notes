@@ -30,53 +30,97 @@ https://math.stackexchange.com/questions/131590/derivation-of-the-formula-for-or
 
 ```{r comment=NA, message=FALSE}
 library(UsingR)
-data(diamonds)
 library(ggplot2)
-fit <- lm(price ~ carat, data = diamond)
+
+# generate some fake data
+set.seed(1234)
+beta <- 2
+intercept <- 10
+n <- 50
+m <- 10
+s <- 10
+noise <- rnorm(n, mean = m, sd = s)
+observed <- runif(n = 50, min = 1, max = 100 )
+outcome <- beta*observed + rep(intercept, n) + noise
+fake <- as.data.frame(cbind(observed, outcome))
+
+# plot the data
+plot(fake$observed, fake$outcome,  
+     xlab = "observed (units)", 
+     ylab = "outcome (units)", 
+     bg = "lightblue", 
+     col = "black", cex = 1.1, pch = 21,frame = FALSE)
+
+
+# calculate the coefficients of the linear model
+fit <- lm(outcome ~ observed, data = fake)
+
+
+#plot the regression line and the predicted points
+abline(fit, lwd = 2)
+points(fake$observed, predict(fit), pch = 19, col = "red") 
+
+# examine the coefficients and the generated model
 coef(fit)
+fit
+
+
 ```
 
 ### regression on centred data will give intercept that is y value for mean value of x
 
-* the I notation is a shortcut to allow evaluation of variable in-line with lm call
-
 ```{r}
-fit2 <- lm(price ~ I(carat - mean(carat)), data = diamond)
+
+#the I notation is a shortcut to allow evaluation of variable in-line with lm call
+#fit2 <- lm(outcome ~ I(observed - mean(observed)), data = fake)
+observed.c <- observed - mean(observed)
+fit2 <- lm(outcome ~ observed.c, data = fake)
 coef(fit2)
+
+
+plot(observed.c, fake$outcome,  
+     xlab = "observed (units)", 
+     ylab = "outcome (units)", 
+     bg = "lightblue", 
+     col = "black", cex = 1.1, pch = 21,frame = FALSE)
+
+
+
+
+#plot the regression line and the predicted points
+abline(fit2, lwd = 2)
+points(observed.c, predict(fit2), pch = 19, col = "red") 
+
+# examine the coefficients and the generated model
+coef(fit2)
+fit2
+
+
 ```
 
 ### making predictions with a model
 
 ```{r}
-newx <- c(0.16, 0.27, 0.34)
-predict(fit, newdata = data.frame(carat = newx))
+# x = observations for which we want to make predictions using the generated model
+x <- c(10,50,90)
+# x must be passed as a column named after the expected predictor variable in a df
+predict(fit, newdata = data.frame(observed = x))
+
 ```
-
-#plotting regression lines in base plot
-
-```{r}
-data(diamond)
-plot(diamond$carat, diamond$price,  
-     xlab = "Mass (carats)", 
-     ylab = "Price (SIN $)", 
-     bg = "lightblue", 
-     col = "black", cex = 1.1, pch = 21,frame = FALSE)
-abline(lm(price ~ carat, data = diamond), lwd = 2)
-points(diamond$carat, predict(fit), pch = 19, col = "red") 
-```
-
-
 
 ### plotting regression lines in ggplot
 
+https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf 
+
 ```{r}
-g <- ggplot(diamond, aes(x=carat, y=price))
-g <- g + xlab("Mass (carats)")
-g <- g + ylab("Price (dollars)")
-g <- g + geom_point(size = 6, colour = "black", alpha = 0.2)
-g <- g + geom_point(size = 5, colour = "blue", alpha = 0.2)
+g <- ggplot(fake, aes(x=observed, y=outcome))
+g <- g + xlab("observed (units)")
+g <- g + ylab("outcome (units)")
+g <- g + geom_point(size = 2, colour = "black", alpha = 0.4)
+g <- g + geom_point(size = 1, colour = "blue", alpha = 0.2)
 g <- g + geom_smooth(method="lm", colour="black")
 g
+
 ```
 
 ### plotting interactive regression plot in plotly
@@ -85,7 +129,6 @@ https://plot.ly/ggplot2/geom_abline/
 
 ```{r}
 library(plotly)
-
 p <- ggplotly(g)
 p
 
