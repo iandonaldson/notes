@@ -127,7 +127,7 @@ g
 
 https://plot.ly/ggplot2/geom_abline/  
 
-```{r}
+```{r, message=F, warning=F}
 library(plotly)
 p <- ggplotly(g)
 p
