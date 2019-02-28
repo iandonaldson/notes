@@ -1,275 +1,275 @@
-Manuals
-The R manual
-http://cran.r-project.org/doc/manuals/R-intro.html
+Manuals  
+The R manual  
+http://cran.r-project.org/doc/manuals/R-intro.html  
+  
+http://www.ats.ucla.edu/stat/r/   
+http://www.ats.ucla.edu/stat/r/faq/   
 
-http://www.ats.ucla.edu/stat/r/ 
-http://www.ats.ucla.edu/stat/r/faq/ 
+Comparison to other languages  
+http://www.johndcook.com/R_language_for_programmers.html   
+http://hyperpolyglot.org/numerical-analysis   
 
-Comparison to other languages
-http://www.johndcook.com/R_language_for_programmers.html 
-http://hyperpolyglot.org/numerical-analysis 
+Advanced R programming - profiling and optimization  
+http://adv-r.had.co.nz/ ***  
+list of most useful functions to learn first: http://adv-r.had.co.nz/Vocabulary.html   
 
-Advanced R programming - profiling and optimization
-http://adv-r.had.co.nz/ ***
-list of most useful functions to learn first: http://adv-r.had.co.nz/Vocabulary.html 
+  
+Making executable reports  
+Rstudio markdown for making reports  
+http://www.rstudio.com/ide/docs/authoring/using_markdown  
+  
+Useful Rants  
+http://tim-smith.us/arrgh/  
+http://www.burns-stat.com/pages/Tutor/R_inferno.pdf  
 
+  
+Tutorial/introduction here:  
+http://manuals.bioinformatics.ucr.edu/home/programming-in-r  
+  
+Knitr/Pandoc/Miktex to make PDFs  
+http://rprogramming.net/create-html-or-pdf-files-with-r-knitr-miktex-and-pandoc/  
+  
+Advanced lectures - scoping  
+http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf  
+Statistics tutorials with R  
+http://ww2.coastal.edu/kingw/statistics/R-tutorials/  
 
-Making executable reports
-Rstudio markdown for making reports
-http://www.rstudio.com/ide/docs/authoring/using_markdown
+  
+Advanced text on probability, R and R graphing and (soon to come ?) statistics and machine learning: http://theanalysisofdata.com/  
 
-Useful Rants
-http://tim-smith.us/arrgh/
-http://www.burns-stat.com/pages/Tutor/R_inferno.pdf
+Statistics help  
+This page focuses primarily on the R language although some explanations of stat methods has creeped in.  If you are looking for an explanation of a statistical test or method (or need to choose one) I usually go to one of these sites/books  
+  
+Choosing and Using Statistical Tests - hard copy at home  
+  
+http://www.biostathandbook.com - John H. MacDonald  
+Various books at home on regression, statistical learning etc.  
+Various books in  e. library.  
+  
+Other Statistics sites  
+Good sites for exploring distribution  
+http://zoonek2.free.fr/UNIX http://www.statmethods.net/advgraphs/probability.html  
+  
+Based on Quick R and R in Action  
+https://www.statmethods.net/  
+  
+Bioconductor workflows  
+http://bioconductor.org/help/workflows/   
+See also my walkthrough of one of these in git/analysis   
+  
+  
+installing  
+for mac: http://cran.rstudio.com/ - get updates from here too  
+  
+installing bioconductor  
+source("http://bioconductor.org/biocLite.R")  
+biocLite()  
+see http://www.bioconductor.org/install/  
+to install specific packages:  
+source("http://bioconductor.org/biocLite.R")  
+ biocLite("limma")  
+  
 
-
-Tutorial/introduction here:
-http://manuals.bioinformatics.ucr.edu/home/programming-in-r
-
-Knitr/Pandoc/Miktex to make PDFs
-http://rprogramming.net/create-html-or-pdf-files-with-r-knitr-miktex-and-pandoc/
-
-Advanced lectures - scoping
-http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/functions.pdf
-Statistics tutorials with R
-http://ww2.coastal.edu/kingw/statistics/R-tutorials/ 
-
-
-Advanced text on probability, R and R graphing and (soon to come ?) statistics and machine learning: http://theanalysisofdata.com/ 
-
-Statistics help
-This page focuses primarily on the R language although some explanations of stat methods has creeped in.  If you are looking for an explanation of a statistical test or method (or need to choose one) I usually go to one of these sites/books
-
-Choosing and Using Statistical Tests - hard copy at home
-
-http://www.biostathandbook.com - John H. MacDonald
-Various books at home on regression, statistical learning etc.
-Various books in  e. library.
-
-Other Statistics sites
-Good sites for exploring distribution
-http://zoonek2.free.fr/UNIX http://www.statmethods.net/advgraphs/probability.html
-
-Based on Quick R and R in Action
-https://www.statmethods.net/
-
-Bioconductor workflows
-http://bioconductor.org/help/workflows/ 
-See also my walkthrough of one of these in git/analysis
-
-
-installing
-for mac: http://cran.rstudio.com/ - get updates from here too
-
-installing bioconductor
-source("http://bioconductor.org/biocLite.R")
-biocLite()
-see http://www.bioconductor.org/install/
-to install specific packages:
-source("http://bioconductor.org/biocLite.R")
- biocLite("limma")
-
-
-to install package
-use R studio interface which calls
-install.packages("iRefR")
-http://www.statmethods.net/interface/packages.html
-
-library()   # see all packages installed 
-search()    # see packages currently loaded
-.libPaths() # where does R store libs?
-#to manually change where R stores libs do this at the shell prompt
-export R_LIBS="/home/your_username/R_libs" 
-
-making your own packages and libs
+to install package  
+use R studio interface which calls  
+install.packages("iRefR")  
+http://www.statmethods.net/interface/packages.html  
+  
+library()   # see all packages installed  
+search()    # see packages currently loaded  
+.libPaths() # where does R store libs?  
+to manually change where R stores libs do this at the shell prompt  
+export R_LIBS="/home/your_username/R_libs"   
+  
+making your own packages and libs  
 <code>source()</code> 
-or
-http://www.r-bloggers.com/creating-your-personal-portable-r-code-library-with-github/
-or
-make a package -see above
+or  
+http://www.r-bloggers.com/creating-your-personal-portable-r-code-library-with-github/  
+or  
+make a package -see above  
+
+  
+start R:  
+in windows: double click the icon  
+in linux: type R at the prompt  
+in mac: use R studio  
+
+run an R script from the command line:  
+http://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html   
+Rscript yourScript.R  
+
+or  
+https://stat.ethz.ch/R-manual/R-devel/library/utils/html/BATCH.html   
+R CMD BATCH yourScript.R  
+the output is sent to a file called yourScript.Rout  
+cat yourScript.Rout  
 
 
-start R:
-in windows: double click the icon
-in linux: type R at the prompt
-in mac: use R studio
+  
+tutorial:  
+help.start() #starts the help browser  
+#start with "An introduction to R"  
+#start with Appendix A of this document for an example session  
+#next if you are interested in using graphng capabilities, go to section 12 on graphical procedures or run  
+#>demo(graphics)  
 
-run an R script from the command line:
-http://stat.ethz.ch/R-manual/R-devel/library/utils/html/Rscript.html 
-Rscript yourScript.R
+  
+sessionInfo() - will give a list of attached packages and libraries  
 
-or
-https://stat.ethz.ch/R-manual/R-devel/library/utils/html/BATCH.html 
-R CMD BATCH yourScript.R
-# the output is sent to a file called yourScript.Rout
-cat yourScript.Rout
-
-
-
-tutorial:
-help.start() #starts the help browser
-#start with "An introduction to R"
-#start with Appendix A of this document for an example session
-#next if you are interested in using graphng capabilities, go to section 12 on graphical procedures or run
-#>demo(graphics)
-
-
-sessionInfo() - will give a list of attached packages and libraries
-
-
+  
  
-debugging
+debugging  
+  
+debug(function_name)  
+#make a call to function name and you're in the debugger  
+Browser[1]> help  
+#do stuff  
+undebug(function_name)  
 
-debug(function_name)
-#make a call to function name and you're in the debugger
-Browser[1]> help
-#do stuff
-undebug(function_name)
+if its been a while, take a look at this video  
+https://vimeo.com/99375765   
+and then this article   
+https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio   
+and then this article which is more advanced  
+http://adv-r.had.co.nz/Exceptions-Debugging.html  
+  
+you can't set breakpoints inside .Rmd files so stop trying  
+  
+and if you are using Rstudio and stepping through an .Rmd file, you are essentially already in a debug mode for that environment  
+  
+if you want to debug one of the function calls from the .Rmd file (say to some function in some package) then do this:  
+  
+type   
+debug(function_name)  
+in the console  
+then the next time this function is called, you will see your console prompt change to   
+Browser[1]>  
+then at this point type help to see the following list of commands  
+n          next  
+s          step into  
+f          finish  
+c or cont  continue  
+Q          quit  
+where      show stack  
+help       show help  
+<expr>     evaluate expression  
+  
+use these commands to step through the code or evaluate the values of variables in the current environment (i.e. the function you are debugging)  
+when you are done, type  
+undebug(function_name)  
+to prevent the debugger from   
 
-if its been a while, take a look at this video
-https://vimeo.com/99375765 
-and then this article 
-https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio 
-and then this article which is more advanced
-http://adv-r.had.co.nz/Exceptions-Debugging.html
-
-you can't set breakpoints inside .Rmd files so stop trying
-
-and if you are using Rstudio and stepping through an .Rmd file, you are essentially already in a debug mode for that environment
-
-if you want to debug one of the function calls from the .Rmd file (say to some function in some package) then do this:
-
-type 
-debug(function_name) 
-in the console
-then the next time this function is called, you will see your console prompt change to 
-Browser[1]>
-then at this point type help to see the following list of commands
-n          next
-s          step into
-f          finish
-c or cont  continue
-Q          quit
-where      show stack
-help       show help
-<expr>     evaluate expression
-
-use these commands to step through the code or evaluate the values of variables in the current environment (i.e. the function you are debugging)
-when you are done, type
-undebug(function_name)
-to prevent the debugger from 
-
-#more
-?debugger
-?browser
-
-correcting functions after you have debugged them
-you have found an error in a function in some package and want to correct it, see this link
-https://stackoverflow.com/questions/2458013/what-ways-are-there-to-edit-a-function-in-r
-
-you can use
-fix(function_name) 
-- this will open an editor and allow you to edit the function
-- make sure to document the solution somewhere since this fix is only for your environment and may have to be replicated elsewhere
-fixInNamespace - might be able to use this to edit functions that are in a package but not exported
-body()
-- can be used to replace entire function or specific lines of function. for example, given this function:
-
-foo <- function(x)
-{
-    line1 <- x
-    line2 <- 0
-    line3 <- line1 + line2
-    return(line3)
-}
-
-and you want to change the fourth line to 
-    line2 <- 2
-
-you can start by retrieving the line numbers using
-as.list(body(foo))
-
-then do
-> body(foo)[[3]] <- substitute(line2 <- 2)
-> foo
-function (x) 
-{
-    line1 <- x
-    line2 <- 2
-    line3 <- line1 + line2
-    return(line3)
-}
-
-#if you want to replace a function body with contents from a file,
-#rewrite the entire function in a new file called fix.R containing
-
-working_function <- function() {...}
-
-and then do
-source("fix.R")
-body(broken_function) <- body(working_function)
-
-you can use a similar strategy to above in order to change the parameters of a function using 
-formals(some_function)
-# see http://adv-r.had.co.nz/Functions.html
-
-
-
-
-quit R: 
-q() 
-
-get help:
-?
-? mean
-#you can also use this syntax 
-help(mean)
-help.search
-RSiteSearch
-apropos
-
-command history:
-use the up and down arrows.
+#more  
+?debugger  
+?browser  
+  
+correcting functions after you have debugged them  
+you have found an error in a function in some package and want to correct it, see this link  
+https://stackoverflow.com/questions/2458013/what-ways-are-there-to-edit-a-function-in-r  
+  
+you can use  
+fix(function_name)   
+- this will open an editor and allow you to edit the function  
+- make sure to document the solution somewhere since this fix is only for your environment and may have to be replicated elsewhere  
+fixInNamespace - might be able to use this to edit functions that are in a package but not exported  
+body()  
+- can be used to replace entire function or specific lines of function. for example, given this function:  
+  
+foo <- function(x)  
+{  
+    line1 <- x  
+    line2 <- 0  
+    line3 <- line1 + line2  
+    return(line3)  
+}  
+  
+and you want to change the fourth line to   
+    line2 <- 2  
+  
+you can start by retrieving the line numbers using  
+as.list(body(foo))  
+  
+then do  
+> body(foo)[[3]] <- substitute(line2 <- 2)  
+> foo  
+function (x)   
+{  
+    line1 <- x  
+    line2 <- 2  
+    line3 <- line1 + line2  
+    return(line3)  
+}  
+  
+#if you want to replace a function body with contents from a file,  
+#rewrite the entire function in a new file called fix.R containing  
+  
+working_function <- function() {...}   
+  
+and then do  
+source("fix.R")  
+body(broken_function) <- body(working_function)  
+  
+you can use a similar strategy to above in order to change the parameters of a function using   
+formals(some_function)  
+# see http://adv-r.had.co.nz/Functions.html  
+  
 
 
-set working directory
-setwd("I:/myR") # note the quotes
-getwd() #to find what wd is currently set to
-list.files() #
-list.dirs() #
 
-
-listing data objects in current workspace:
-ls()
-removing data objects:
-rm(somedataObjectName)
-
-downloading data from a url
-#there is poor support for downloading multiple files from a directory - you will need to download one file at a time using the method below - alternatively, install wget or curl and use 
-system("wget -r http://xxx/xxx")
-system("curl -O http://xxx/xxx")
-
-if (!file.exists("data")){ dir.create("data") }
-
-fileUrl <- "http://cancer.sanger.ac.uk/cancergenome/assets/cancer_gene_census.tsv"
-
-download.file(fileUrl, 
-destfile="cancer_gene_census.tsv", 
-method="curl", quiet = FALSE, mode = "w",
-              cacheOK = TRUE)
-dateDownloaded <- date()
-
-
-reading in data from a tab-delimited file
-data.df <- read.table(
-"cancer_gene_census.tsv",
-		header=TRUE,
-		sep="\t",
-		stringsAsFactors=FALSE, #unless you want
-		quote="" #means no quotes - can solve lots of problems
-)
-
-note: sometimes files can contain quotes or comment characters where you might not expect them.  using quote="" and comment.char=# (after removing comments you know about at the top of a file) can solve problems and save hours of fun.  Comment characters (like #) in the middle of a line will cause an error like "line 12344 does not have the expected number of elements".  The problem is that the problematic line number reported by R's scan function may be incorrect.
+quit R:  
+q()   
+  
+get help:  
+?  
+? mean  
+#you can also use this syntax   
+help(mean)  
+help.search  
+RSiteSearch  
+apropos  
+  
+command history:  
+use the up and down arrows.  
+  
+  
+set working directory  
+setwd("I:/myR") # note the quotes  
+getwd() #to find what wd is currently set to  
+list.files() #  
+list.dirs() #  
+  
+  
+listing data objects in current workspace:  
+ls()  
+removing data objects:  
+rm(somedataObjectName)  
+  
+downloading data from a url  
+#there is poor support for downloading multiple files from a directory - you will need to download one file at a time using the method  below - alternatively, install wget or curl and use  
+system("wget -r http://xxx/xxx")  
+system("curl -O http://xxx/xxx")  
+  
+if (!file.exists("data")){ dir.create("data") }  
+  
+fileUrl <- "http://cancer.sanger.ac.uk/cancergenome/assets/cancer_gene_census.tsv"  
+  
+download.file(fileUrl,   
+destfile="cancer_gene_census.tsv",   
+method="curl", quiet = FALSE, mode = "w",  
+              cacheOK = TRUE)  
+dateDownloaded <- date()  
+  
+  
+reading in data from a tab-delimited file  
+data.df <- read.table(  
+"cancer_gene_census.tsv",  
+		header=TRUE,  
+		sep="\t",  
+		stringsAsFactors=FALSE, #unless you want  
+		quote="" #means no quotes - can solve lots of problems  
+)  
+  
+'''note''': sometimes files can contain quotes or comment characters where you might not expect them.  using quote="" and comment.char=# (after removing comments you know about at the top of a file) can solve problems and save hours of fun.  Comment characters (like #) in the middle of a line will cause an error like "line 12344 does not have the expected number of elements".  The problem is that the problematic line number reported by R's scan function may be incorrect.  
 
 note: the fastest way to remove the first line of a large file might be
 csplit -k fileName 1 '{1}'
