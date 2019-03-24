@@ -14,7 +14,7 @@ Reference card
 appendices have the most interesting bits   
 http://www.tldp.org/LDP/abs/html/refcards.html   
   
-advanced bash tutorial  http://tldp.org/LDP/abs/html/   
+advanced bash tutorial  (http://tldp.org/LDP/abs/html/)   
 
 sed and awk and unix    http://www.grymoire.com/Unix/   
   
