@@ -1,3 +1,5 @@
+coding In Bash Awk Sed Unix And Osx - notes And Learning Resources
+
 **Resources**
   
 beginners bash tutorial http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html  
