@@ -1,5 +1,6 @@
 ---
 title: coding In Bash Awk Sed Unix And Osx - notes And Learning Resources
+layout: page
 ---
 
 **Resources**
