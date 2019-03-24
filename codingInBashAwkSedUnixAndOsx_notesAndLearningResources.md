@@ -4,7 +4,7 @@ title: coding In Bash Awk Sed Unix And Osx - notes And Learning Resources
 
 **Resources**
   
-beginners bash tutorial [http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html]  
+beginners bash tutorial on [tldp.org](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)  
 especially  
 Chapter 3 - on variable expansion and substitution  
 Chapter 4 - on regex  
