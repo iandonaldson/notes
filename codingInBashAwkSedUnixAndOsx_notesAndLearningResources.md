@@ -3,35 +3,35 @@
 
 **Resources**
   
-beginners bash tutorial on [tldp.org](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html)  
+[beginners bash tutorial](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) on tldp.org
 especially  
 Chapter 3 - on variable expansion and substitution  
 Chapter 4 - on regex  
 Chapter 5.1 Quoting variables with spaces in them #hours of fun  
   
-Reference card  
-appendices have the most interesting bits   
-http://www.tldp.org/LDP/abs/html/refcards.html   
-  
-advanced bash tutorial  (http://tldp.org/LDP/abs/html/)   
+[reference card appendices](http://www.tldp.org/LDP/abs/html/refcards.html) have the most interesting bits   
 
-sed and awk and unix    http://www.grymoire.com/Unix/   
+[advanced bash tutorial](http://tldp.org/LDP/abs/html/)   
+
+[sed and awk and unix](http://www.grymoire.com/Unix/)   
   
-index of bash commands  http://ss64.com/bash/  
+[index of bash commands](http://ss64.com/bash)  
   
-bash manual  http://www.gnu.org/software/bash/manual/bashref.html   
+[bash manual](http://www.gnu.org/software/bash/manual/bashref.html)   
   
-comparison operators  http://www.freeos.com/guides/lsst/ch03sec02.html  
+[comparison operators](http://www.freeos.com/guides/lsst/ch03sec02.html)
   
-great command line tutorial for absolute beginners  
-http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything   
+great [command line tutorial](http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) for absolute beginners  
+   
   
   
 **nohup and redirecting output**
+```
 nohup program_name 1>log 2>&1 &  
-1>log means send stdout to log and   
-2>&1 means send stderr to the same output as stdout  
-& means return my prompt  
+```
+`1>log` means send stdout to log and   
+`2>&1` means send stderr to the same output as stdout  
+`&` means return my prompt  
 another option to nohup is screen (search this document) or start a process and place it into 'nohup' like state using cntrl-z, bg, disown - see below  
 
 **placing a running process into nohup**
