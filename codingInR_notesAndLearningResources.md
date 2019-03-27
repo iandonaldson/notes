@@ -669,7 +669,7 @@ cancerNames2geneids <- data.frame(cancerName=character(), geneid=integer(), stri
 cancerNames2geneids <- data.frame(matrix(ncol = 2, nrow = 0), stringsAsFactors=F)
 
 #or this way
-
+ 
 cancerNames2geneids = data.frame(matrix(vector(), 0, 2, dimnames=list(c(), c("cancerName", "geneid"))), stringsAsFactors=F)
 
 #there seems to be no sense to adding column names when declaring a data-frame since they are overwritten by the rbind function and have to be readded
