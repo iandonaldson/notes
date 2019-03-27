@@ -34,42 +34,36 @@ nohup program_name 1>log 2>&1 &
 `&` means return my prompt  
 another option to nohup is screen (search this document) or start a process and place it into 'nohup' like state using cntrl-z, bg, disown - see below  
 
-**placing a running process into nohup**
-see http://www.kossboss.com/linux---move-running-to-process-nohup 
+**placing a running process into nohup**  
+  
 0. Run some SOMECOMMAND
-1. ctrl+z to stop (pause) the program and get back to the shell
-2. bg to run it in the background
-3. disown -h so that the process isn't killed when the terminal closes
+1. `ctrl+z` to stop (pause) the program and get back to the shell
+2. `bg` to run it in the background
+3. `disown -h` so that the process isn't killed when the terminal closes
 4. Type exit to get out of the shell because now you're good to go as the operation will run in the background in it own process so its not tied to a shell
   
-Tar (tape archive)
-tar –cvzf this.tar.gz this
-cntrl-z
-bg
-disown -ah
- 
+**Tar (tape archive)**  
+name the tar archive first and then specify what goes in in it  
+`tar –cvzf this.tar.gz this`  
 
-bash debugger
-http://bashdb.sourceforge.net/
-sudo yum install bashdb
-http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference 
+**bash debugger**
+[http://bashdb.sourceforge.net/](http://bashdb.sourceforge.net/)
+`sudo yum install bashdb`
+[http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference](http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference)
 
-IDE for Bash ? try this plugin for eclipse
-http://sourceforge.net/projects/shelled/ 
+IDE for Bash ? try this [plugin](http://sourceforge.net/projects/shelled/) for eclipse
 
-
-an example script
-http://wiki.centos.org/HowTos/Rotational_backup_with_remote_backup_options 
+**an example script**
+[http://wiki.centos.org/HowTos/Rotational_backup_with_remote_backup_options](http://wiki.centos.org/HowTos/Rotational_backup_with_remote_backup_options) 
 
 
-how to parse command line parameters
-
-
+**how to parse command line parameters**
 Preferred Method: Using straight bash without getopt[s]
-I originally answered the question as the OP asked. This Q/A is getting a lot of attention, so I should also offer the non-magic way to do this. I'm going to expand upon guneysus's answer to fix the nasty sed and include Tobias Kienzler's suggestion.
 Two of the most common ways to pass key value pair arguments are:
-Straight Bash Space Separated
-Usage ./myscript.sh -e conf -s /etc -l /usr/lib /etc/hosts
+Straight Bash Space Separated 
+Usage `./myscript.sh -e conf -s /etc -l /usr/lib /etc/hosts`
+
+```
 #!/bin/bash
 # Use > 1 to consume two arguments per pass in the loop (e.g. each
 # argument has a corresponding value to go with it).
@@ -124,12 +118,14 @@ to get help.
 EOF
 	exit 1
 fi
+```
 
 
 
 
+**variable dereferencing ($VAR vs ${VAR} vs "${VAR}")**
 
-variable dereferencing ($VAR vs ${VAR} vs "${VAR}")
+**CONT HERE**
 
 when should you use these different forms
 VAR=$VAR1
