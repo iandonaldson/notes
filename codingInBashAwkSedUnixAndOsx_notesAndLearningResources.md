@@ -5,7 +5,7 @@
 
 a learning path could start here: a great [command line tutorial](http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything) for absolute beginners 
 
-and then go here for a [beginners bash tutorial](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) on tldp.org
+and then go here for a [beginners bash tutorial](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) on tldp.org  
 my favourite sections are ...  
 Chapter 3 - on variable expansion and substitution  
 Chapter 4 - on regex  
@@ -14,16 +14,16 @@ and finally try the [advanced bash tutorial](http://tldp.org/LDP/abs/html/) as y
   
 and then use these as references as you begin to use bash 
 
-[reference card appendices](http://www.tldp.org/LDP/abs/html/refcards.html) the appendices have the most interesting bits 
+*[reference card appendices](http://www.tldp.org/LDP/abs/html/refcards.html) the appendices have the most interesting bits 
 
-[index of bash commands](http://ss64.com/bash) 
+*[index of bash commands](http://ss64.com/bash) 
 
-[sed and awk and unix](http://www.grymoire.com/Unix/)    
+*[sed and awk and unix](http://www.grymoire.com/Unix/)    
   
-[bash manual](http://www.gnu.org/software/bash/manual/bashref.html)   
+*[bash manual](http://www.gnu.org/software/bash/manual/bashref.html)   
   
-and this link because i'm always forgetting how to use  
-[comparison operators](http://www.freeos.com/guides/lsst/ch03sec02.html)
+and this link because i'm always forgetting how to use ... 
+*[comparison operators](http://www.freeos.com/guides/lsst/ch03sec02.html)
   
   
 **nohup and redirecting output**
