@@ -7,9 +7,9 @@ a learning path could start here: a great [command line tutorial](http://lifehac
 
 and then go here for a [beginners bash tutorial](http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) on tldp.org  
 my favourite sections are ...  
-Chapter 3 - on variable expansion and substitution  
-Chapter 4 - on regex  
-Chapter 5.1 Quoting variables with spaces in them #hours of fun  
+* Chapter 3 - on variable expansion and substitution  
+* Chapter 4 - on regex  
+* Chapter 5.1 Quoting variables with spaces in them #hours of fun  
 and finally try the [advanced bash tutorial](http://tldp.org/LDP/abs/html/) as you have time 
   
 and then use these as references as you begin to use bash 
@@ -22,7 +22,7 @@ and then use these as references as you begin to use bash
   
 * [bash manual](http://www.gnu.org/software/bash/manual/bashref.html)   
   
-and this link because i'm always forgetting how to use ... 
+and this link because i'm always forgetting how to use ...  
 * [comparison operators](http://www.freeos.com/guides/lsst/ch03sec02.html)
   
   
