@@ -35,15 +35,16 @@ nohup program_name 1>log 2>&1 &
 `&` means return my prompt  
 another option to nohup is screen (search this document) or start a process and place it into 'nohup' like state using cntrl-z, bg, disown - see below  
 
-**placing a running process into nohup**  
+**disowning your processes so you can go home**  
   
-0. Run some SOMECOMMAND
+0. suppose you start running some command and realize that its not going to finish before you want to go home  
 1. `ctrl+z` to stop (pause) the program and get back to the shell
 2. `bg` to run it in the background
 3. `disown -h` so that the process isn't killed when the terminal closes
-4. Type exit to get out of the shell because now you're good to go as the operation will run in the background in it own process so its not tied to a shell
+4. Type exit to get out of the shell because now you're good to go as the operation will run in the background in its own process so its not tied to a shell
+5. undock your laptop, shut it down and go home
   
-**Tar (tape archive)**  
+**tar (tape archive)**  
 name the tar archive first and then specify what goes in in it  
 `tar –cvzf this.tar.gz this`  
 
