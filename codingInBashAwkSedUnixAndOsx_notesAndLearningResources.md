@@ -14,16 +14,16 @@ and finally try the [advanced bash tutorial](http://tldp.org/LDP/abs/html/) as y
   
 and then use these as references as you begin to use bash 
 
-*[reference card appendices](http://www.tldp.org/LDP/abs/html/refcards.html) the appendices have the most interesting bits 
+* [reference card appendices](http://www.tldp.org/LDP/abs/html/refcards.html) the appendices have the most interesting bits 
 
-*[index of bash commands](http://ss64.com/bash) 
+* [index of bash commands](http://ss64.com/bash) 
 
-*[sed and awk and unix](http://www.grymoire.com/Unix/)    
+* [sed and awk and unix](http://www.grymoire.com/Unix/)    
   
-*[bash manual](http://www.gnu.org/software/bash/manual/bashref.html)   
+* [bash manual](http://www.gnu.org/software/bash/manual/bashref.html)   
   
 and this link because i'm always forgetting how to use ... 
-*[comparison operators](http://www.freeos.com/guides/lsst/ch03sec02.html)
+* [comparison operators](http://www.freeos.com/guides/lsst/ch03sec02.html)
   
   
 **nohup and redirecting output**
