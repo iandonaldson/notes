@@ -49,11 +49,11 @@ name the tar archive first and then specify what goes in in it
 `tar –cvzf this.tar.gz this`  
 
 **bash debugger**
-[http://bashdb.sourceforge.net/](http://bashdb.sourceforge.net/)
-`sudo yum install bashdb`
-[http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference](http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference)
+[http://bashdb.sourceforge.net/](http://bashdb.sourceforge.net/)  
+`sudo yum install bashdb`  
+[http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference](http://bashdb.sourceforge.net/bashdb.html#Debugger-Command-Reference)  
 
-IDE for Bash ? try this [plugin](http://sourceforge.net/projects/shelled/) for eclipse
+IDE for Bash ? try this [plugin](http://sourceforge.net/projects/shelled/) for eclipse  
 
 **an example script**
 [http://wiki.centos.org/HowTos/Rotational_backup_with_remote_backup_options](http://wiki.centos.org/HowTos/Rotational_backup_with_remote_backup_options) 
