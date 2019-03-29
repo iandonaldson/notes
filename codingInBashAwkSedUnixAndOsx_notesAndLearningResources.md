@@ -122,36 +122,30 @@ EOF
 fi
 ```
 
-
-
-
-**variable dereferencing ($VAR vs ${VAR} vs "${VAR}")**
-
-**CONT HERE**
+**variable dereferencing ($VAR vs ${VAR} vs "${VAR}")**  
 
 when should you use these different forms
-VAR=$VAR1
-VAR=${VAR1}
-VAR="$VAR1"
-VAR="${VAR1}"
-see this discussion $VAR vs ${VAR} and to quote or not to quote"
-http://unix.stackexchange.com/questions/4899/var-vs-var-and-to-quote-or-not-to-quote 
-and why i use ${VAR} format when dereferencing variables
-http://stackoverflow.com/questions/8748831/when-do-we-need-curly-braces-in-variables-using-bash
-and why you might sometimes want to use the form "${VAR}"
-http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html 
-Chapter 5.1 Quoting variables with spaces in them #hours of fun
+* VAR=$VAR1  
+* VAR=${VAR1}  
+* VAR="$VAR1"  
+* VAR="${VAR1}"  
+see this discussion $VAR vs ${VAR} and to quote or not to quote"  
+http://unix.stackexchange.com/questions/4899/var-vs-var-and-to-quote-or-not-to-quote  
+and why i use ${VAR} format when dereferencing variables  
+http://stackoverflow.com/questions/8748831/when-do-we-need-curly-braces-in-variables-using-bash  
+and why you might sometimes want to use the form "${VAR}"  
+http://tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html  
+Chapter 5.1 Quoting variables with spaces in them #hours of fun  
 
 
 
-if statement
+**if statement**
 
-hours of fun
+hours of fun  
 !!! note - numeric comparison operators are  -eq, -ne, -lt, -le, -gt or -ge. 
 see http://www.tldp.org/LDP/abs/html/comparison-ops.html 
 !!! note - string comparison operators are ==, !=, <, >
 !!! note - file test operators are -e, -d, and many more http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html 
-
 !!! note spaces inside square brackets
 !!! quote arguments as part of good form in case the evaluated form has a space in it … e.g. 
 a="qwe rty"
