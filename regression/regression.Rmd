@@ -26,7 +26,7 @@ https://math.stackexchange.com/questions/131590/derivation-of-the-formula-for-or
 
 ## linear regression using the linear model (lm) function
 
-### how to obtain coefficients (intercept and slope for a linear model)
+### making up fake data to work with
 
 ```{r comment=NA, message=FALSE}
 library(UsingR)
@@ -43,6 +43,11 @@ noise <- rnorm(n, mean = m, sd = s)
 observed <- runif(n = 50, min = 1, max = 100 )
 outcome <- beta*observed + rep(intercept, n) + noise
 fake <- as.data.frame(cbind(observed, outcome))
+```
+
+### basic lm usage and examination of model
+
+```{r comment=NA, message=FALSE}
 
 # plot the data
 plot(fake$observed, fake$outcome,  
@@ -61,39 +66,64 @@ abline(fit, lwd = 2)
 points(fake$observed, predict(fit), pch = 19, col = "red") 
 
 # examine the coefficients and the generated model
-coef(fit)
 fit
+coef(fit)
+summary(fit)
+
+# to show the following 6) plots
+# 1) a plot of residuals against fitted values (should be uncorrelated with fitted (observed) values), 
+# 2) a Scale-Location plot of sqrt(| residuals |) against fitted values, 
+# 3) a Normal Q-Q plot (residuals (error terms) are assumed to follow a normal distribution for many tests), 
+# 4) a plot of Cook's distances versus row labels, 
+# 5) a plot of residuals against leverages, and 
+# 6) a plot of Cook's distances against leverage/(1-leverage). 
+# see methods(plot) then ?plot.lm for more
+plot(fit, which = c(1:6))
+# typing in ?influence.measures in R will display the detailed documentation on all available functions to measure influence
+# e.g. 
+# hatvalues(model) = measures of leverage
+# dfbetas(model) = change in individual coefficients when the ith point is deleted in fitting the model - these can be used to evaluate how deleting or including this point impact a particular aspect of the model
+# effectively measures influence of the individual coefficients
+# cooks(model).distance = overall change in coefficients when the ith point is deleted
+# #many others
 
 
 ```
 
-### regression on centred data will give intercept that is y value for mean value of x
+### centering data 
+
+regression on centred data will give intercept that is y value for mean value of x
 
 ```{r}
 
 #the I notation is a shortcut to allow evaluation of variable in-line with lm call
 #fit2 <- lm(outcome ~ I(observed - mean(observed)), data = fake)
+
+# centre
 observed.c <- observed - mean(observed)
 fit2 <- lm(outcome ~ observed.c, data = fake)
 coef(fit2)
-
-
 plot(observed.c, fake$outcome,  
      xlab = "observed (units)", 
      ylab = "outcome (units)", 
      bg = "lightblue", 
      col = "black", cex = 1.1, pch = 21,frame = FALSE)
-
-
-
-
 #plot the regression line and the predicted points
 abline(fit2, lwd = 2)
 points(observed.c, predict(fit2), pch = 19, col = "red") 
 
-# examine the coefficients and the generated model
-coef(fit2)
-fit2
+#scale
+observed.s <- (observed - mean(observed))/sd(observed)
+fit3 <- lm(outcome ~ observed.s, data = fake)
+coef(fit3)
+plot(observed.s, fake$outcome,  
+     xlab = "observed (units)", 
+     ylab = "outcome (units)", 
+     bg = "lightblue", 
+     col = "black", cex = 1.1, pch = 21,frame = FALSE)
+#plot the regression line and the predicted points
+abline(fit3, lwd = 2)
+points(observed.s, predict(fit3), pch = 19, col = "red") 
 
 
 ```
