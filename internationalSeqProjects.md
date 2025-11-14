@@ -1,5 +1,9 @@
 **Major International Sequencing Projects**
 
+DISCLAIMER:  Generated 2025-11-14 by ChatGPT 5.1 Deep Research and validated content and links by Gemini 2.5 Flash.  
+Intended as a starting reading list and reference.  Follow the links to supporting text.  
+
+
 **Human Genome Project (HGP)**
 
 **Years active:** 1990–2003[wi.mit.edu](https://wi.mit.edu/news/international-consortium-completes-human-genome-project#:~:text=When%20the%20Human%20Genome%20Project,significantly%20under%20original%20spending%20projections).  
